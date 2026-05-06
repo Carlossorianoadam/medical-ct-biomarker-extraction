@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# Medical data - never commit private patient data
+*.nii
+*.nii.gz
+*.dcm
+*.dicom
+*.nrrd
+*.mha
+*.mhd
+
+# nnU-Net generated folders and checkpoints
+nnUNet_raw/
+nnUNet_preprocessed/
+nnUNet_results/
+Dataset*/
+checkpoint*.pth
+*.model
+*.pkl
+
+# Outputs
+outputs/
+results/
+logs/
+*.csv
+*.json
+!examples/outputs/example_biomarkers.csv
+!examples/outputs/example_debug.json
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/

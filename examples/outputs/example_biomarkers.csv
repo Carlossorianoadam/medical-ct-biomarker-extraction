@@ -1,0 +1,3 @@
+ID;dataset_split;nivel_vertebra_IA;HU_vertebra_IA;vol_vertebra_IA_cm3;nivel_psoas_IA;area_psoas_der_IA_cm2;area_psoas_izq_IA_cm2;HU_psoas_der_IA;HU_psoas_izq_IA;vol_psoas_der_IA_cm3;vol_psoas_izq_IA_cm3;procesamiento_OK;comentario_IA
+SAMPLE_001;test;L1;142.3;18.45;L3;6.12;5.88;42.1;40.7;22.34;21.91;True;
+SAMPLE_002;test;T12;87.5;16.02;L3;3.94;4.21;29.8;31.2;14.20;15.10;True;Fallback bone level used: T12. Low vertebral HU.

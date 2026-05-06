@@ -1,0 +1,17 @@
+# Copy this file to paths.yaml and adapt it to your local environment.
+
+nnunet:
+  raw: /path/to/nnUNet_raw
+  preprocessed: /path/to/nnUNet_preprocessed
+  results: /path/to/nnUNet_results
+  dataset_id: "002"
+  configuration: 3d_fullres
+  fold: "0"
+  checkpoint: checkpoint_best.pth
+
+paths:
+  totalsegmentator_root: /path/to/TotalSegmentator
+  dataset_output: /path/to/Dataset002_LumbarPsoas
+  input_nifti: /path/to/input_nifti
+  output_masks: /path/to/output_masks
+  output_results: /path/to/output_results

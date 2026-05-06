@@ -1,0 +1,19 @@
+{
+  "ID": "SAMPLE_001",
+  "dataset_split": "test",
+  "bone_level_used": "L1",
+  "bone_fallback": false,
+  "muscle_level_used": "L3",
+  "muscle_fallback": false,
+  "vertebral_roi_area_mm2": 198.4,
+  "vertebral_roi_valid": true,
+  "HU_vertebra": 142.3,
+  "HU_vertebra_median": 145.1,
+  "HU_vertebra_std": 28.7,
+  "right_psoas_area_cm2": 6.12,
+  "left_psoas_area_cm2": 5.88,
+  "right_psoas_HU": 42.1,
+  "left_psoas_HU": 40.7,
+  "processing_OK": true,
+  "comment": "Synthetic example. No patient data included."
+}

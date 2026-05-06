@@ -1,0 +1,10 @@
+numpy
+scipy
+pandas
+matplotlib
+nibabel
+pydicom
+dicom2nifti
+scikit-image
+PyYAML
+nnunetv2
