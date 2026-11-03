@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+  <title id="title">Medical CT biomarker extraction pipeline</title>
+  <desc id="desc">Five stages: CT input, preprocessing, 3D nnU-Net segmentation, biomarker extraction, and quality-controlled outputs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef3f8"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#10243a" flood-opacity=".10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/>
+    </marker>
+    <style>
+      .heading { font: 700 22px Inter, Arial, sans-serif; fill: #10243a; letter-spacing: .3px; }
+      .body { font: 400 17px Inter, Arial, sans-serif; fill: #40536a; }
+      .small { font: 600 13px Inter, Arial, sans-serif; fill: #64748b; letter-spacing: 1.5px; }
+      .number { font: 700 16px Inter, Arial, sans-serif; fill: #ffffff; }
+    </style>
+  </defs>
+  <rect width="1600" height="520" rx="28" fill="url(#bg)"/>
+  <text x="800" y="66" text-anchor="middle" class="small">END-TO-END WORKFLOW</text>
+  <text x="800" y="105" text-anchor="middle" style="font:700 30px Inter,Arial,sans-serif;fill:#10243a">From abdominal CT to quantitative biomarkers</text>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="165" width="270" height="270" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="348" y="165" width="270" height="270" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="648" y="165" width="270" height="270" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="948" y="165" width="270" height="270" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="1248" y="165" width="304" height="270" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  </g>
+
+  <g>
+    <rect x="48" y="165" width="270" height="10" rx="5" fill="#0f766e"/>
+    <rect x="348" y="165" width="270" height="10" rx="5" fill="#2563eb"/>
+    <rect x="648" y="165" width="270" height="10" rx="5" fill="#7c3aed"/>
+    <rect x="948" y="165" width="270" height="10" rx="5" fill="#d97706"/>
+    <rect x="1248" y="165" width="304" height="10" rx="5" fill="#0f766e"/>
+  </g>
+
+  <g>
+    <circle cx="82" cy="211" r="18" fill="#0f766e"/><text x="82" y="217" text-anchor="middle" class="number">1</text>
+    <text x="110" y="218" class="heading">CT input</text>
+    <text x="76" y="275" class="body">
+      <tspan x="76" dy="0">Abdominal CT studies</tspan>
+      <tspan x="76" dy="31">DICOM / NIfTI volumes</tspan>
+      <tspan x="76" dy="31">Series selection</tspan>
+    </text>
+
+    <circle cx="382" cy="211" r="18" fill="#2563eb"/><text x="382" y="217" text-anchor="middle" class="number">2</text>
+    <text x="410" y="218" class="heading">Preprocessing</text>
+    <text x="376" y="275" class="body">
+      <tspan x="376" dy="0">DICOM to NIfTI</tspan>
+      <tspan x="376" dy="31">Intensity / spacing handling</tspan>
+      <tspan x="376" dy="31">nnU-Net dataset formatting</tspan>
+    </text>
+
+    <circle cx="682" cy="211" r="18" fill="#7c3aed"/><text x="682" y="217" text-anchor="middle" class="number">3</text>
+    <text x="710" y="218" class="heading">3D segmentation</text>
+    <text x="676" y="275" class="body">
+      <tspan x="676" dy="0">nnU-Net v2 · 3d_fullres</tspan>
+      <tspan x="676" dy="31">T12, L1, L2, L3, L4</tspan>
+      <tspan x="676" dy="31">Left and right psoas</tspan>
+    </text>
+
+    <circle cx="982" cy="211" r="18" fill="#d97706"/><text x="982" y="217" text-anchor="middle" class="number">4</text>
+    <text x="1010" y="218" class="heading">Biomarkers</text>
+    <text x="976" y="275" class="body">
+      <tspan x="976" dy="0">Vertebral trabecular HU</tspan>
+      <tspan x="976" dy="31">Psoas HU and 2D area</tspan>
+      <tspan x="976" dy="31">Vertebral / muscle volume</tspan>
+    </text>
+
+    <circle cx="1282" cy="211" r="18" fill="#0f766e"/><text x="1282" y="217" text-anchor="middle" class="number">5</text>
+    <text x="1310" y="218" class="heading">Outputs &amp; QC</text>
+    <text x="1276" y="275" class="body">
+      <tspan x="1276" dy="0">CSV and JSON results</tspan>
+      <tspan x="1276" dy="31">Visual control images</tspan>
+      <tspan x="1276" dy="31">Automatic review flags</tspan>
+    </text>
+  </g>
+
+  <g stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M320 300 H340"/>
+    <path d="M620 300 H640"/>
+    <path d="M920 300 H940"/>
+    <path d="M1220 300 H1240"/>
+  </g>
+  <text x="800" y="482" text-anchor="middle" style="font:400 15px Inter,Arial,sans-serif;fill:#64748b">Automated segmentation, biomarker extraction and quality-control workflow</text>
+</svg>
